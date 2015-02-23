@@ -1,0 +1,4 @@
+patterns: 
+ - url: ^http:\/\/(www.)*some-site.site\/path\/[A-Za-z0-9_\.\-~]*
+   xpath: /h:html/h:body/h:div[2]/h:div/h:div[3]/h:div/h:div/h:div/h:div[3]/h:div/h:div[2]/h:div/h:div/h:div[1]/h:div/h:div/h:div
+   title: /h:html/h:body/h:div[2]/h:div/h:div[3]/h:div/h:div/h:div/h:div[2]/h:h1

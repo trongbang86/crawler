@@ -1,0 +1,28 @@
+apply plugin: 'scala'
+apply plugin: 'eclipse'
+apply plugin:'application'
+
+repositories{
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies{
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile "org.scala-lang:scala-library:2.11.2"
+    compile 'edu.uci.ics:crawler4j:3.4'
+	compile 'mysql:mysql-connector-java:5.1.9'
+	compile 'org.hibernate:hibernate-entitymanager:3.3.2.GA'
+	compile 'dom4j:dom4j:1.6.1'
+	compile 'commons-logging:commons-logging:1.1.1'
+	compile 'commons-collections:commons-collections:3.2.1'
+	compile 'cglib:cglib:2.2'
+	compile 'javax.transaction:jta:1.1'
+	compile 'org.jdom:jdom:2.0.2'
+	compile 'jaxen:jaxen:1.1.6'
+	compile 'org.yaml:snakeyaml:1.11'
+	
+    testCompile "junit:junit:4.11"
+}
+
+mainClassName = "sh.Main"

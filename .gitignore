@@ -1,0 +1,7 @@
+TestCrawl/*
+bin/*
+.cache
+File2Hex.txt
+logs/*
+build/*
+.gradle/
