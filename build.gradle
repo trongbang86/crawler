@@ -8,9 +8,13 @@ repositories{
 }
 
 dependencies{
-    compile 'org.slf4j:slf4j-api:1.7.5'
-    compile "org.scala-lang:scala-library:2.11.2"
-    compile 'edu.uci.ics:crawler4j:3.4'
+	
+	compile 'org.scala-lang:scala-compiler:2.11.2'
+	compile 'org.scala-lang:scala-library:2.11.2'
+
+	compile 'org.slf4j:slf4j-api:1.7.5'
+	compile "org.scala-lang:scala-library:2.11.2"
+	compile 'edu.uci.ics:crawler4j:3.4'
 	compile 'mysql:mysql-connector-java:5.1.9'
 	compile 'org.hibernate:hibernate-entitymanager:3.3.2.GA'
 	compile 'dom4j:dom4j:1.6.1'
@@ -22,7 +26,23 @@ dependencies{
 	compile 'jaxen:jaxen:1.1.6'
 	compile 'org.yaml:snakeyaml:1.11'
 	
-    testCompile "junit:junit:4.11"
+	testCompile 'org.scalatest:scalatest_2.11:2.2.4'
+	testCompile "junit:junit:4.11"
+	testCompile 'org.hsqldb:hsqldb:2.2.9'
 }
 
 mainClassName = "sh.Main"
+
+eclipse {
+	classpath {
+		containers 'org.springsource.ide.eclipse.gradle.classpathcontainer'
+	}
+}
+
+test << {
+    ant.taskdef(name: 'scalatest', classname: 'org.scalatest.tools.ScalaTestAntTask', classpath: classpath.asPath)
+    ant.scalatest(runpath: testClassesDir, haltonfailure: 'true', fork: 'false') {
+        reporter(type: 'stdout')
+    }
+}
+

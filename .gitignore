@@ -5,3 +5,7 @@ File2Hex.txt
 logs/*
 build/*
 .gradle/
+/bin/
+.project
+.classpath
+
