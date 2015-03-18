@@ -20,3 +20,7 @@ Following are some of the highlights of this project:
 - config/parsing.yml defines elements to be extracted using DOM structure
 - config/config.properties defines the proxy values, database connections
 - crawler.sql is the database schema where the extracted data is stored
+
+A list of available commands:
+- `gradle eclipse`: To generate Eclipse project's settings 
+- `gradle test`: To run unit testing for Scala
