@@ -22,5 +22,6 @@ Following are some of the highlights of this project:
 - crawler.sql is the database schema where the extracted data is stored
 
 A list of available commands:
-- `gradle eclipse`: To generate Eclipse project's settings 
-- `gradle test`: To run unit testing for Scala
+- `gradle eclipse`: generate Eclipse project's settings 
+- `gradle clean`: clean the build directory
+- `gradle test`: run unit testing for Scala

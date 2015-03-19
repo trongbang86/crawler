@@ -14,7 +14,8 @@ object HibernateUtil {
       dbConnectionProperties.load(new FileInputStream(Constants.FILE_CONFIG))
       
       // Create the SessionFactory from hibernate.cfg.xml
-      return new AnnotationConfiguration().mergeProperties(dbConnectionProperties).configure().buildSessionFactory()
+      return new AnnotationConfiguration().mergeProperties(dbConnectionProperties)
+    		  .configure(Constants.HIBERNATE_CONFIG).buildSessionFactory()
 
     } catch {
       case ex: Throwable => {

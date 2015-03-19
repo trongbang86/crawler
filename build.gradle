@@ -40,9 +40,12 @@ eclipse {
 }
 
 test << {
-    ant.taskdef(name: 'scalatest', classname: 'org.scalatest.tools.ScalaTestAntTask', classpath: classpath.asPath)
-    ant.scalatest(runpath: testClassesDir, haltonfailure: 'true', fork: 'false') {
+    ant.taskdef(name: 'scalatest', classname: 'org.scalatest.tools.ScalaTestAntTask', 
+			classpath: classpath.asPath)
+    ant.scalatest(runpath: testClassesDir, 
+		haltonfailure: 'true', fork: 'true') {
         reporter(type: 'stdout')
+		maxmemory="1280M"
     }
 }
 

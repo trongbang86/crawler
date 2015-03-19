@@ -1,0 +1,1 @@
+insert into links (id, processed_time, status, touched, url) values (1,1,'STORED',1,'http://test3.com')

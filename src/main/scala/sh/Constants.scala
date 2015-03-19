@@ -16,4 +16,7 @@ object Constants {
   def FILE_SEEDS_NAME = "seeds.txt"  
   def FILE_SEEDS_SCAFFOLD = s"/${SCAFFOLD_FOLDER}/${FILE_SEEDS_NAME}"
   def FILE_SEEDS = s"${CONFIG_FOLDER}/${FILE_SEEDS_NAME}"
+  
+  var HIBERNATE_CONFIG= "hibernate.cfg.xml"
+  var HIBERNATE_CONFIG_TEST= "hibernate_test.cfg.xml"
 }
